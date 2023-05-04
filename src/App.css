@@ -1,0 +1,43 @@
+.App {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menu {
+  background-color: rgb(152, 209, 209);
+  width: 480px;
+  height: 500px;
+  color: rgb(16, 1, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menu button {
+  padding: 8px;
+  width: 290px;
+}
+.quiz {
+  background-color: rgb(152, 209, 209);
+  width: 480px;
+  height: 500px;
+  color: rgb(16, 1, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.quiz button {
+  padding: 8px;
+  width: 290px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: cyan;
+  color: rgb(1, 1, 21);
+}
+.quiz button :hover {
+  background-color: #8ac143;
+  color: rgb(33, 9, 9);
+}
