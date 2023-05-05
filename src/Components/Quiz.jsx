@@ -5,17 +5,19 @@ import { contexted } from "./context/Context";
 function Quiz() {
 
 
-  const{user, setUser,score, setScore, setGame} = useContext(contexted);
+  const{user, setUser,score, setScore, setGame,opchoosen, setOpChoosen} = useContext(contexted);
 
   const [currQuestion, setcurrQuestion] = useState(0);
 
-  const [opchoosen, setOpChoosen] = useState("");
+  
 
   const nextQuestion = () => {
     if (questions[currQuestion].answer === opchoosen) {
       setScore(score + 1);
     }
+    setOpChoosen([...opchoosen, questions[currQuestion][opchoosen]]);
     setcurrQuestion(currQuestion + 1);
+
   };
   
 

@@ -4,11 +4,11 @@ export const questions = [
         a : "yes",
         b: "No",
         c: "i dont care",
-        d: "i dont know but i would love to know",
+        d: "i dont know, i have no time to worry about others.",
         answer: "a"
     },
     {
-        prompt: " Do you want to meet him?",
+        prompt: " Do you want to meet him now?",
         a : "yes",
         b: "No",
         c: " i wont either",
@@ -17,7 +17,7 @@ export const questions = [
     },
     {
         prompt: "ok then would you like to be around him?",
-        a : "yes",
+        a : "i dont know",
         b: "No",
         c: "I would love to",
         d: "nooooooooooo",
