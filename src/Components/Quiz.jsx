@@ -33,16 +33,16 @@ function Quiz() {
       <h2>{questions[currQuestion].prompt}</h2>
       <div className="options">
       
-       <button className="btn btn-success" onClick={() => setOpChoosen("a")}>
+       <button className="btn btn-warning" onClick={() => setOpChoosen("a")}>
           {questions[currQuestion].a}
         </button>
-        <button className="btn btn-success"onClick={() => setOpChoosen("b")}>
+        <button className="btn btn-warning"onClick={() => setOpChoosen("b")}>
           {questions[currQuestion].b}
         </button>
-        <button className="btn btn-success" onClick={() => setOpChoosen("c")}>
+        <button className="btn btn-warning" onClick={() => setOpChoosen("c")}>
           {questions[currQuestion].c}
         </button>
-        <button className="btn btn-success" onClick={() => setOpChoosen("d")}>
+        <button className="btn btn-warning" onClick={() => setOpChoosen("d")}>
           {questions[currQuestion].d}
         </button>
        </div>
