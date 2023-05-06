@@ -32,19 +32,21 @@ function Quiz() {
        <h3> Hi {user}, answer these questions, lets see k choose grxau. 😀</h3>
       <h2>{questions[currQuestion].prompt}</h2>
       <div className="options">
-        <button onClick={() => setOpChoosen("a")}>
+      
+       <button className="btn btn-success" onClick={() => setOpChoosen("a")}>
           {questions[currQuestion].a}
         </button>
-        <button onClick={() => setOpChoosen("b")}>
+        <button className="btn btn-success"onClick={() => setOpChoosen("b")}>
           {questions[currQuestion].b}
         </button>
-        <button onClick={() => setOpChoosen("c")}>
+        <button className="btn btn-success" onClick={() => setOpChoosen("c")}>
           {questions[currQuestion].c}
         </button>
-        <button onClick={() => setOpChoosen("d")}>
+        <button className="btn btn-success" onClick={() => setOpChoosen("d")}>
           {questions[currQuestion].d}
         </button>
-      </div>
+       </div>
+     
       {currQuestion === questions.length - 1 ? (
         <div className="my-3">
           <button onClick={finished} className="btn btn-danger">Completed</button><br/>
