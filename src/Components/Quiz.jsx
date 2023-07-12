@@ -12,6 +12,10 @@ function Quiz() {
   
 
   const nextQuestion = () => {
+    if(!opchoosen) {
+      alert("You must choose a option")
+      return
+    }
     if (questions[currQuestion].answer === opchoosen) {
       setScore(score + 1);
     }
@@ -19,6 +23,11 @@ function Quiz() {
     setcurrQuestion(currQuestion + 1);
 
   };
+  const chooseOptions = (clickedOption) =>{
+    alert(`You have choosed ${clickedOption}`)
+    
+    setOpChoosen(clickedOption)
+  }
   
 
   const finished = ()=>{
@@ -33,16 +42,16 @@ function Quiz() {
       <h2>{questions[currQuestion].prompt}</h2>
       <div className="options">
       
-       <button className="btn btn-warning" onClick={() => setOpChoosen("a")}>
-          {questions[currQuestion].a}
-        </button>
-        <button className="btn btn-warning"onClick={() => setOpChoosen("b")}>
+       <button className="btn btn-warning clicked" onClick={() => chooseOptions("a")}>
+          {questions[currQuestion].a} 
+        </button> 
+        <button className="btn btn-warning clicked"onClick={() => chooseOptions("b")}>
           {questions[currQuestion].b}
-        </button>
-        <button className="btn btn-warning" onClick={() => setOpChoosen("c")}>
+        </button> 
+        <button className="btn btn-warning clicked" onClick={() => chooseOptions("c")}>
           {questions[currQuestion].c}
-        </button>
-        <button className="btn btn-warning" onClick={() => setOpChoosen("d")}>
+        </button> 
+        <button className="btn btn-warning clicked" onClick={() => chooseOptions("d")}>
           {questions[currQuestion].d}
         </button>
        </div>

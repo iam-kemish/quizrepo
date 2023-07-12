@@ -12,7 +12,7 @@ export const questions = [
         a : "21",
         b: "20",
         c: "22",
-        d: "23m",
+        d: "23",
         answer: "a"
     },
     {

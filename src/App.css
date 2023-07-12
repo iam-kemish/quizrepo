@@ -41,3 +41,6 @@
   background-color: #8ac143;
   color: rgb(33, 9, 9);
 }
+.clicked {
+  color: purple;
+}
