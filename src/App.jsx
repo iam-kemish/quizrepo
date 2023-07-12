@@ -14,7 +14,7 @@ function App() {
     <contexted.Provider value={{ game, setGame, score, setScore, user, setUser,opchoosen, setOpChoosen}}>
       
       <div className="container">
-        <h1 style={{ textAlign: "center", padding: "6px" }}>Welcome to my game.🥰</h1>
+        <h1 style={{ textAlign: "center", padding: "6px" }}>Welcome to my game.</h1>
         {game === "mainmenu" && <Main />}
         {game === "quizplay" && <Quiz />}
         {game === "endscr" && <End />}

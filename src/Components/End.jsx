@@ -12,7 +12,7 @@ const End = () => {
          
           {score} / {questions.length} <br/><br/>
           {
-            score <= 2 ? <span>(I am utterly disappointed, sachi alik badi expect garexu🙂..jamma {score} ettiii.)</span>: <span>(wow score herdai khusi lagyo.😍 )</span>
+            score <= 2 ? <span>(I am utterly disappointed🙂..jamma {score} ettiii.)</span>: <span>(wow score herdai khusi lagyo.😍 )</span>
           }
         
           
