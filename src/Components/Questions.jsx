@@ -16,12 +16,12 @@ export const questions = [
         answer: "a"
     },
     {
-        prompt: "Who is the inventer of dot net?",
+        prompt: "Which company invented Reactjs?",
         a : "Google",
         b: "Facebook",
         c: "Microsoft",
         d: "Amazon",
-        answer: "c"
+        answer: "b"
     },
     {
         prompt: "Which laptop kemish uses?",

@@ -14,15 +14,25 @@ function Quiz() {
   const nextQuestion = () => {
     if(!opchoosen) {
       alert("You must choose a option")
-      return
+      return;
     }
     if (questions[currQuestion].answer === opchoosen) {
       setScore(score + 1);
     }
-    setOpChoosen([...opchoosen, questions[currQuestion][opchoosen]]);
+    // setOpChoosen([...opchoosen, questions[currQuestion][opchoosen]]);
+    setOpChoosen("")
     setcurrQuestion(currQuestion + 1);
 
   };
+  const PrevQuestion = () =>{
+   let question = prompt("Do you want to edit your previous answer? yes or no")
+   if (question === "yes") {
+    setcurrQuestion(currQuestion - 1);
+   } else if(question === "no") {
+    return;
+   }
+   
+  }
   const chooseOptions = (clickedOption) =>{
     alert(`You have choosed ${clickedOption}`)
     
@@ -63,8 +73,8 @@ function Quiz() {
         </div>
       ) : (
         <div className="my-3">
-          <button onClick={nextQuestion} className="btn btn-success">Next</button>
-         
+          <button onClick={nextQuestion} className="btn btn-success">Next</button><br/>
+           <button onClick={PrevQuestion} className="btn btn-info" disabled={currQuestion === 0}>Previous</button>
         </div>
       )}
     </div>

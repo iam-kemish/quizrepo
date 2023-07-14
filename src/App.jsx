@@ -7,7 +7,7 @@ import { contexted } from "./Components/context/Context";
 function App() {
   const [game, setGame] = useState("mainmenu");
   const[score, setScore] = useState(0)
-  const[user, setUser] = useState("Default user")
+  const[user, setUser] = useState("")
   const [opchoosen, setOpChoosen] = useState("");
   const [inputval, setInputVal] = useState("");
   return (

@@ -5,21 +5,22 @@ export default function Main() {
   const { game, setGame } = useContext(contexted);
   const { user, setUser } = useContext(contexted);
   const {inputval, setInputVal} = useContext(contexted)
-  // const [hasName, setHasName] = useState(false);
+  
 
   const handleclick = () => {
     if(!inputval) {
-      alert("You must enter a name.")
+      alert("kemish says you must enter your name.")
       return
     }else {
       setUser(inputval);
+
     }
-    // setHasName(true);
+  
   };
 
   const handleStartQuiz = () =>{
-    if(!inputval) {
-      alert("Again, You must enter a name first.")
+    if(!user) {
+      alert("Again, kemish says you must enter your name first.")
     }else {
       setGame("quizplay")
     }
@@ -40,7 +41,7 @@ export default function Main() {
         Insert name
       </button>
       <br />
-     {/* { hasName && ( */}
+   
      <div>
         <h3>{user}'s game</h3>
        <br />
@@ -50,7 +51,7 @@ export default function Main() {
          </button>
        }
      </div>
-     {/* )} */}
+    
     </div>
   );
 }

@@ -6,7 +6,11 @@ import { contexted } from "./context/Context";
 import { questions } from "./Questions";
 
 const End = () => {
-  const { user, setUser, score, setScore, opchoosen, setOpChoosen } = useContext(contexted);
+  const { user, setUser, score, setScore, opchoosen, setOpChoosen, setGame } = useContext(contexted);
+  const GoBackAgain = () =>{
+    setUser("")
+  setGame("mainmenu")
+  }
 
   let message;
   switch (true) {
@@ -34,7 +38,11 @@ const End = () => {
           <br /><br />
           {message}
         </h3>
-      </div>
+      </div><br/><br/>
+     <div className="container my-3" style={{textAlign: "center"}}>
+     <h5>Click on reset to play the game again.</h5>
+      <button className="btn btn-primary" onClick={GoBackAgain}>Reset</button>
+     </div>
     </div>
   );
 };
