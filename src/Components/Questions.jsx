@@ -5,7 +5,7 @@ export const questions = [
         b: "Everest",
         c: "Kanchanjunga",
         d: "Makalu",
-        answer: "a"
+        answer: "b"
     },
     {
         prompt: "Mosquito's life span?",

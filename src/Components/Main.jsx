@@ -43,7 +43,7 @@ export default function Main() {
       <br />
    
      <div>
-        <h3>{user}'s game</h3>
+        <h3 className="user">{user}'s game</h3>
        <br />
        {
          <button className="btn btn-primary" onClick={handleStartQuiz}>

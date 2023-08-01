@@ -1,29 +1,29 @@
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import { questions } from "./Questions";
 import { contexted } from "./context/Context";
 
 function Quiz() {
 
 
-  const{user, setUser,score, setScore, setGame,opchoosen, setOpChoosen} = useContext(contexted);
+  const{user, score, setScore, setGame,opchoosen, setOpChoosen} = useContext(contexted);
 
   const [currQuestion, setcurrQuestion] = useState(0);
 
-  
-
-  const nextQuestion = () => {
+  const nextQuestion = () =>{
     if(!opchoosen) {
       alert("You must choose a option")
       return;
-    }
-    if (questions[currQuestion].answer === opchoosen) {
-      setScore(score + 1);
-    }
-    // setOpChoosen([...opchoosen, questions[currQuestion][opchoosen]]);
-    setOpChoosen("")
-    setcurrQuestion(currQuestion + 1);
+    }else {
+     if( questions[currQuestion].answer === opchoosen ) {
 
-  };
+       setScore(score + 1);
+     }
+      setcurrQuestion(currQuestion + 1);
+      setOpChoosen("")
+    }
+  }
+
+
   const PrevQuestion = () =>{
    let question = prompt("Do you want to edit your previous answer? yes or no")
    if (question === "yes") {
@@ -40,12 +40,12 @@ function Quiz() {
   }
   
 
-  const finished = ()=>{
-    if (questions[currQuestion].answer === opchoosen) {
-        setScore(score + 1);
-      }
-  setGame("endscr")
-  }
+  const finished = () => {
+    if (currQuestion === questions.length - 1 && questions[currQuestion].answer === opchoosen) {
+      setScore(score + 1);
+    }
+    setGame("endscr");
+  };
   return (
     <div className="my-3 quiz" style={{ textAlign: "center" }}>
        <h3> Hi {user}, answer these questions, lets see k choose grxau. 😀</h3>
@@ -82,3 +82,4 @@ function Quiz() {
 }
 
 export default Quiz;
+Quiz.js
